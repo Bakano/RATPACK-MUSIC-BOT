@@ -1,3 +1,4 @@
+import os
 import discord
 from discord.ext import commands
 
@@ -21,6 +22,10 @@ async def play(ctx, *, url: str):
 async def stop(ctx):
     await ctx.send('Stopping music')
 
-# Run bot
-TOKEN = 'MTM0ODM1MjQzMTM0NzQ2NjM3MQ.GB4S-l.yNkclw_d6PF8_4a5ohzOHFO_c3bk-F0CAD4oyY'
-bot.run(TOKEN)
+# Get bot token from environment variable
+TOKEN = os.getenv('DISCORD_BOT_TOKEN')
+
+if TOKEN is None:
+    print("Error: DISCORD_BOT_TOKEN is not set.")
+else:
+    bot.run(TOKEN)
