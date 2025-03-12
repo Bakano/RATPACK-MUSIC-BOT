@@ -102,7 +102,7 @@ function initializePlayer(client) {
                 iconURL: musicIcons.playerIcon,
                 url: config.SupportServer
             })
-            .setFooter({ text: `Ratpack Raido`, iconURL: musicIcons.musicIcon })
+            .setFooter({ text: `Ratpack Radio`, iconURL: musicIcons.musicIcon })
             .setTimestamp()
             .setDescription(  
                 `- **Title:** [${track.info.title}](${track.info.uri})\n` +
